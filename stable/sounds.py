@@ -16,7 +16,7 @@ def _play_sound(soundfile):
         soundfilenew = soundfile.replace("~", expanduser("~"), 1)
     else:
         soundfilenew = soundfile
-    subprocess.Popen(["mpg123", "-q", soundfilenew])
+    subprocess.Popen(["mplayer", "-really-quiet", soundfilenew])
 
 
 def _cmd_sounds(arg1=None, arg2=None, arg3=None):
